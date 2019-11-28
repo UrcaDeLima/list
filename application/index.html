@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div id="list"></div>
+  </div>
+
+  <script>
+
+    $(document).ready(function(){
+      axios
+        .get("http://localhost:8787")
+        .then(function(response){
+          console.log(response.data.dataAboutAI);
+          response.data.dataAboutAI.forEach(function(element){
+            elementClassicForSelect = '<div class="element"><div class="author">Author: '+ element.author +'</div><div class="quote">'+ element.quote +'</div></div>';
+            $('#list').append(elementClassicForSelect);
+          });
+      });
+    });
+
+    require('./render.js');
+
+  </script>
+
+</body>
+</html>
