@@ -21,7 +21,6 @@
       axios
         .get("http://localhost:8787")
         .then(function(response){
-          console.log(response.data.dataAboutAI);
           response.data.dataAboutAI.forEach(function(element){
             elementClassicForSelect = '<div class="element"><div class="author">Author: '+ element.author +'</div><div class="quote">'+ element.quote +'</div></div>';
             $('#list').append(elementClassicForSelect);
