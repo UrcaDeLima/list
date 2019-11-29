@@ -1,4 +1,4 @@
-# list
+п»ї# list
 
 1)git clone https://github.com/UrcaDeLima/list.git
 2)cd list
@@ -9,4 +9,4 @@
 7)npm install
 8)npm start
 
-Поднятый на Python Tornado Web Server в качестве api для desktop-приложения на Electron
+РџРѕРґРЅСЏС‚С‹Р№ РЅР° Python Tornado Web Server РІ РєР°С‡РµСЃС‚РІРµ api РґР»СЏ desktop-РїСЂРёР»РѕР¶РµРЅРёСЏ РЅР° Electron
